@@ -6,8 +6,8 @@
     DURATION: 4 months
     TUTOR: Siva
   tasks:
-- name: print the course info
-  vars:
-      COURSE: ansible
-  ansible.builtin.debug:
-    msg: " Course name is : {{ COURSE }}, Duration is {{ DURATION }}, trained by {{ TUTOR }} "
+  - name: print the course info
+    vars:
+      COURSE: Ansible
+    ansible.builtin.debug:
+     msg: " Course name is : {{ COURSE }}, Duration is {{ DURATION }}, trained by {{ TUTOR }} "
