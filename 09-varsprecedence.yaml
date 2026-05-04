@@ -9,6 +9,8 @@
    - name: NAME
      prompt: What is your NAME?
      private: false  
+  ansible.builtin.debug:
+      msg: "Name: {{ NAME }}"
   tasks:
   - name: testing variables preference
     vars:
