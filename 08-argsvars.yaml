@@ -1,0 +1,11 @@
+- name: variables practice
+  hosts: local
+  connection: local
+  tasks:
+  - name: print the course info
+    ansible.builtin.debug:
+      msg: " Course name is : {{ COURSE }}, Duration is {{ DURATION }}, trained by {{ TUTOR }} "
+
+
+
+# ansible-playbook -i inv.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 -e "COURSE=Ansible" -e "DURATION=10HRS" -e "TUTOR=Sivakumar" 08-argsvars.yaml
