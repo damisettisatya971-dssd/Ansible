@@ -6,4 +6,4 @@
     msg: Enter a number {{ NUMBER }}
   ansible.builtin.debug:
     msg: Given {{ NUMBER }} is less than 10
-  when NUMBER < 10
+  when: NUMBER < 10
