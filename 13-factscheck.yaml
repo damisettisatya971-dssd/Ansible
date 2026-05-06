@@ -3,11 +3,12 @@
   connection: local
   become: yes
   tasks:
-  - name: check the os and install the software based on it
+  - name: check the os and install nginx if redhat
     ansible.builtin.dnf:
       name: nginx
       state: latest
     when: ansible_os_family == "redhat"
+  - name: check the os and install nginx if redhat
     ansible.builtin.apt:
       name: nginx
       state: latest
