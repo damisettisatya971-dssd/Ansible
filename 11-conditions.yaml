@@ -2,10 +2,13 @@
   hosts: local
   connection: local
 
-  vars_prompt:
-    - name: number
-      prompt: Enter a number
-      private: false
+  vars:
+   number: 12
+
+  # vars_prompt:
+  #   - name: number
+  #     prompt: Enter a number
+  #     private: false
 
   tasks:
   - name: check number is less than 10 or not
