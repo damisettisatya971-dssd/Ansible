@@ -3,8 +3,10 @@
   connection: local
   tasks:
   - name: check number is less than 10 or not
+    vars_prompt:
+    - name: NUMBER
+      prompt: Enter a number
+      private: false
     ansible.builtin.debug:
-      msg: 
-      - " Enter a number {{ NUMBER }} "
-      - " Given {{ NUMBER }} is less than 10 "
+      msg: " Given {{ NUMBER }} is less than 10 "
     when: NUMBER < 10
