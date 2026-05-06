@@ -1,0 +1,14 @@
+- name: check the facts
+  hosts: local
+  connection: local
+  tasks:
+  - name: check the os and install the software based on it
+    ansible.builtin.dnf:
+      name: nginx
+      state: latest
+    when: ansible_os_family == "redhat"
+    ansible.builtin.apt:
+      name: nginx
+      state: latest
+    when: ansible_os_family == "debian"
+
