@@ -8,7 +8,7 @@
       name: nginx
       state: latest
     when: ansible_os_family == "RedHat"
-  - name: check the os and install nginx if redhat
+  - name: check the os and install nginx if debian
     ansible.builtin.apt:
       name: nginx
       state: latest
