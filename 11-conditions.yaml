@@ -2,8 +2,9 @@
   hosts: local
   connection: local
   tasks:
-  ansible.builtin.debug:
-    msg: Enter a number {{ NUMBER }}
-  ansible.builtin.debug:
-    msg: Given {{ NUMBER }} is less than 10
-  when: NUMBER < 10
+  - name: check number is less than 10 or not
+    ansible.builtin.debug:
+      msg: 
+      - " Enter a number {{ NUMBER }} ""
+      - " Given {{ NUMBER }} is less than 10 ""
+    when: NUMBER < 10
