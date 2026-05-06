@@ -3,7 +3,7 @@
   connection: local
   vars:
     technologies: DevOps, Linux, Shell, Ansible # string
-    # name: "Sivakumar reddy M"
+    name: "Sivakumar reddy M"
     gmail: Info@GMAIL.COM
     ipaddress: "19222.168.0.1"
     # dictionary == map
@@ -17,14 +17,14 @@
     - key: Environment
       value: dev
   tasks:
-  - name: default variable
-    ansible.builtin.debug:
-      msg: "Hello, {{ name | default('Ramesh') }}"
-    
-  # # string to list
-  # - name: convert string to list
+  # - name: default variable
   #   ansible.builtin.debug:
-  #     msg: "Technologies are: {{ technologies | split(',') }}"
+  #     msg: "Hello, {{ name | default('Ramesh') }}"
+    
+  # string to list
+  - name: convert string to list
+    ansible.builtin.debug:
+      msg: "Technologies are: {{ technologies | split(',') }}"
 
   # - name: convert map to list
   #   ansible.builtin.debug:
